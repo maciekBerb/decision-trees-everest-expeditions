@@ -21,7 +21,7 @@ from scipy import misc
 from matplotlib import pyplot as plt
 
 
-#Reading datastet, spliting it  to train set and test set
+#Reading datastet, splitting it  to train set and test set
 data = pd.read_excel("Everest_data2.xlsx")
 train, test = train_test_split(data, test_size = 0.15)
 print("training size: {}, test size: {}". format(len(train), len(test)))
@@ -32,7 +32,7 @@ palette = sns.color_palette(red_blue)
 sns.set_palette(palette)
 sns.set_style("white")
 
-# create variable for variables of succes and failure
+# create variable for variables of success and failure
 pos_year = data[data['Y'] == 1]['year']
 neg_year = data[data['Y'] == 0]['year']
 
@@ -96,7 +96,7 @@ neg_year.hist(alpha = 0.7, bins = 30, label = 'failure')
 plt.legend(loc = 'upper right')
 
 
-# create plot to view distribution of succes/failure for other variables
+# create plot to view distribution of success/failure for other variables
 fig2 = plt.figure(figsize = (15, 15))
 
 
